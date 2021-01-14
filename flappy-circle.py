@@ -3,7 +3,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
 import time
 
-driver = webdriver.Firefox(executable_path='C:\Users\taeji\Documents')
+driver = webdriver.Firefox(executable_path='/Users/taeji/Documents')
 
 driver.get('http://tanksw.com/flappy-circle/')
 
