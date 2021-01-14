@@ -3,7 +3,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
 import time
 
-driver = webdriver.Firefox(executable_path='/Users/taeji/Documents')
+driver = webdriver.Firefox(executable_path='/Users/taeji/Documents/geckodriver')
 
 driver.get('http://tanksw.com/flappy-circle/')
 
@@ -15,11 +15,11 @@ replay_button = driver.find_element_by_css_selector('div#replay')
 
 play_button.click()
 
-# driver.execute_script('window.VyN = -2') # 원이 낮게 점프한다
-driver.execute_script('''window.line = [[0, 300], [400, 300], [500, 300], [600, 300], [700, 300]];
-window.pushPoint = function (startX) {
-    window.line.push([startX + 100, 300]);
-};''')
+driver.execute_script('window.VyN = -3') # 원이 낮게 점프한다
+# driver.execute_script('''window.line = [[0, 300], [400, 300], [500, 300], [600, 300], [700, 300]];
+# window.pushPoint = function (startX) {
+#     window.line.push([startX + 100, 300]);
+# };''')
 
 while True:
     is_playing = driver.execute_script('return window.isPlaying')

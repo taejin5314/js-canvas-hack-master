@@ -2,7 +2,7 @@ from selenium import webdriver
 import numpy as np
 import time
 
-driver = webdriver.Firefox(executable_path='/Users/taeji/Documents')
+driver = webdriver.Firefox(executable_path='/Users/taeji/Documents/geckodriver')
 
 driver.get('http://slither.io')
 
